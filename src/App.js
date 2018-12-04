@@ -8,11 +8,12 @@ import {
   Link
 } from 'react-router-dom';
 
-import Homepage from './Homepage';
-import Post from './Post';
-import FavoriteMovies from './FavoriteMovies';
-import FavoriteFood from './FavoriteFood';
-import About from './About';
+import Home from './Home';
+import Canada from './Canada';
+import World from './World';
+import Business from './Business';
+import Tech from './Tech';
+import Politics from './Politics';
 
 
 class App extends Component {
