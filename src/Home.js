@@ -10,7 +10,10 @@ class Home extends Component {
     }
 
   componentDidMount(){
-    let req = 'https://newsapi.org/v2/top-headlines?country=ca&apiKey=8c29924efc99428bacd58ae603967956';
+    let req = 'https://newsapi.org/v2/everything?' +
+          'q=news&' +
+          'sortBy=popularity&' +
+          'apiKey=8c29924efc99428bacd58ae603967956';
 
     var base = this
     fetch(req)
@@ -38,7 +41,7 @@ class Home extends Component {
     }
     return(
       <div>
-        <h1>Tech News</h1>
+        <h1>Home</h1>
           Loading...
       </div>
     )
