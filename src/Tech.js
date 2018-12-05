@@ -13,7 +13,7 @@ class Tech extends Component {
 
   componentDidMount(){
     let req = 'https://newsapi.org/v2/everything?' +
-              'q=Apple&' +
+              'q=tech&' +
               'from=2018-12-04&' +
               'sortBy=popularity&' +
               'apiKey=8c29924efc99428bacd58ae603967956';

@@ -6,10 +6,10 @@ class Article extends Component {
     let articlesList = this.props.articles.map(article =>
       <div>
         <h2>{article.title}</h2>
-        <img src={`article.urlToImage`}/>
+        <img src={article.urlToImage}/>
         <p>Written by {article.author}</p>
         <p>{article.description}</p>
-        <a href={`article.url`}>Read the full article</a>
+        <a href={article.url}>Read the full article</a>
       </div>)
 
     return (
