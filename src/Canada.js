@@ -10,7 +10,7 @@ class Canada extends Component {
     }
 
   componentDidMount(){
-    let req = 'https://newsapi.org/v2/top-headlines?country=ca&apiKey=8c29924efc99428bacd58ae603967956';
+    let req = 'https://newsapi.org/v2/top-headlines?country=ca&category=entertainment&apiKey=8c29924efc99428bacd58ae603967956';
 
     var base = this
     fetch(req)
