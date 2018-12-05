@@ -31,14 +31,14 @@ class Canada extends Component {
     if (this.state.articles) {
     return (
         <div>
-          <h1>Local News</h1>
+          <h1>Canada News</h1>
           <Article articles={articles}/>
         </div>
       )
     }
     return(
       <div>
-        <h1>Local News</h1>
+        <h1>Canada News</h1>
           Loading...
       </div>
     )

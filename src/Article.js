@@ -9,6 +9,7 @@ class Article extends Component {
         <img src={article.urlToImage}/>
         <p>Written by {article.author}</p>
         <p>{article.description}</p>
+        <p>{article.source.name}</p>
         <a href={article.url}>Read the full article</a>
       </div>)
 
