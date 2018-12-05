@@ -21,6 +21,7 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <h1>The Expatriates</h1>
           <nav>
             <Link to="/">Home</Link>{' '}
             <Link to="/Canada">Canada</Link>{' '}
