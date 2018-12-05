@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Article from './Article'
 
-class Politics extends Component {
+class Sport extends Component {
   constructor(props){
       super(props)
       this.state = {
@@ -10,7 +10,7 @@ class Politics extends Component {
     }
 
   componentDidMount(){
-    let req = 'https://newsapi.org/v2/top-headlines?language=en&category=politics&apiKey=8c29924efc99428bacd58ae603967956';
+    let req = 'https://newsapi.org/v2/top-headlines?country=ca&category=sports&apiKey=8c29924efc99428bacd58ae603967956';
 
     var base = this
     fetch(req)
@@ -31,14 +31,14 @@ class Politics extends Component {
     if (this.state.articles) {
     return (
         <div>
-          <h1>Tech News</h1>
+          <h1>Sport</h1>
           <Article articles={articles}/>
         </div>
       )
     }
     return(
       <div>
-        <h1>Tech News</h1>
+        <h1>Sport</h1>
           Loading...
       </div>
     )
@@ -47,4 +47,4 @@ class Politics extends Component {
 
 }
 
-export default Politics;
+export default Sport;
