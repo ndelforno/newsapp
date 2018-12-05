@@ -10,7 +10,7 @@ import {
 
 import Home from './Home';
 import Canada from './Canada';
-import World from './World';
+import France from './France';
 import Business from './Business';
 import Tech from './Tech';
 import Politics from './Politics';
@@ -25,14 +25,14 @@ class App extends Component {
           <nav>
             <Link to="/">Home</Link>{' '}
             <Link to="/Canada">Canada</Link>{' '}
-            <Link to="/World">World</Link>{' '}
+            <Link to="/France">France</Link>{' '}
             <Link to="/Business">Business</Link>{' '}
             <Link to="/Tech">Tech</Link>{' '}
             <Link to="/Politics">Politics</Link>
           </nav>
           <Route exact path="/" component={Home} />
           <Route path="/Canada" component={Canada} />
-          <Route path="/World" component={World} />
+          <Route path="/France" component={France} />
           <Route path="/Business" component={Business} />
           <Route path="/Tech" component={Tech} />
           <Route path="/Politics" component={Politics} />
