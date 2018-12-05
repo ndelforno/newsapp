@@ -38,7 +38,7 @@ class Tech extends Component {
     return (
         <div>
           <h1>Tech News</h1>
-          {articles[0].title}
+          <Article articles={articles}/>
         </div>
       )
     }
