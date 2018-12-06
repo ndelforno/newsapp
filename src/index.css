@@ -26,7 +26,7 @@ nav{
 
 nav > a {
   font-size: 30px;
-  margin: 10px;
+  margin: 20px;
   text-decoration: none;
   color: #7f2d0a;
 }
@@ -44,6 +44,12 @@ nav > a:hover{
   margin:10px;
   padding: 5px;
   width:30%;
+}
+
+.article > a{
+  font-weight: bold;
+  text-decoration: none;
+  color:#234884;
 }
 
 .articleimg{

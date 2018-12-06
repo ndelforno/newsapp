@@ -23,6 +23,7 @@ class App extends Component {
       <Router>
         <div>
           <h1>The Expatriates</h1>
+          <hr></hr>
           <nav>
             <Link to="/">Home</Link>{' '}
             <Link to="/Canada">Canada</Link>{' '}
