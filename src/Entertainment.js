@@ -31,14 +31,14 @@ class Entertainment extends Component {
     if (this.state.articles) {
     return (
         <div class="articles">
-          <h1>home</h1>
+          <h1>Entertainment</h1>
           <Article articles={articles}/>
         </div>
       )
     }
     return(
-      <div>
-        <h2>Home</h2>
+      <div class="articles">
+        <h2>Entertainment</h2>
           Loading...
       </div>
     )

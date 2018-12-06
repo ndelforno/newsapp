@@ -37,7 +37,7 @@ class Health extends Component {
       )
     }
     return(
-      <div>
+      <div class="articles">
         <h2>Health</h2>
           Loading...
       </div>
