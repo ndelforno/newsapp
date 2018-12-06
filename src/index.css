@@ -5,17 +5,17 @@ html{
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Cinzel', serif;
+  font-family: 'PT Serif Caption', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'PT Serif Caption', serif;
 }
 
 h1{
+  color: #234884;
   font-size: 40px;
   text-align: center;
 }
@@ -27,6 +27,11 @@ nav{
 nav > a {
   font-size: 30px;
   margin: 10px;
+  text-decoration: none;
+  color: #7f2d0a;
+}
+nav > a:hover{
+  color: black;
 }
 .articles{
   text-align: center;
