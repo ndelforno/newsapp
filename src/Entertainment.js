@@ -31,7 +31,7 @@ class Entertainment extends Component {
     if (this.state.articles) {
     return (
         <div class="articles">
-          <h1>Entertainment</h1>
+          <h2>Entertainment</h2>
           <Article articles={articles}/>
         </div>
       )

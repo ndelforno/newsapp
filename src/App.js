@@ -42,6 +42,7 @@ class App extends Component {
           <Route path="/Sport" component={Sport} />
           <Route path="/Entertainment" component={Entertainment} />
           <Route path="/Health" component={Health} />
+          <footer>Made By Nicolas Delforno</footer>
         </div>
       </Router>
     )

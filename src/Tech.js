@@ -33,14 +33,14 @@ class Tech extends Component {
     if (this.state.articles) {
     return (
         <div class="articles">
-          <h1>Tech News</h1>
+          <h2>Tech News</h2>
           <Article articles={articles}/>
         </div>
       )
     }
     return(
       <div>
-        <h1>Tech News</h1>
+        <h2>Tech News</h2>
           Loading...
       </div>
     )

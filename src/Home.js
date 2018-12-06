@@ -12,7 +12,7 @@ class Home extends Component {
   componentDidMount(){
     let req = 'https://newsapi.org/v2/everything?' +
           'q=news&' +
-          'sortBy=popularity&' +
+          'sortBy=date&' +
           'apiKey=8c29924efc99428bacd58ae603967956';
 
     var base = this

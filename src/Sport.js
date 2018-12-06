@@ -31,14 +31,14 @@ class Sport extends Component {
     if (this.state.articles) {
     return (
         <div class="articles">
-          <h1>Sport</h1>
+          <h2>Sport</h2>
           <Article articles={articles}/>
         </div>
       )
     }
     return(
       <div>
-        <h1>Sport</h1>
+        <h2>Sport</h2>
           Loading...
       </div>
     )
