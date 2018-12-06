@@ -32,7 +32,7 @@ class Tech extends Component {
     console.log(articles)
     if (this.state.articles) {
     return (
-        <div>
+        <div class="articles">
           <h1>Tech News</h1>
           <Article articles={articles}/>
         </div>

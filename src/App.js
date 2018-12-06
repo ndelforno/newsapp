@@ -14,7 +14,8 @@ import France from './France';
 import Business from './Business';
 import Tech from './Tech';
 import Sport from './Sport';
-
+import Entertainment from './Entertainment';
+import Health from './Health';
 
 class App extends Component {
   render() {
@@ -28,7 +29,9 @@ class App extends Component {
             <Link to="/France">France</Link>{' '}
             <Link to="/Business">Business</Link>{' '}
             <Link to="/Tech">Tech</Link>{' '}
-            <Link to="/Sport">Sport</Link>
+            <Link to="/Sport">Sport</Link>{' '}
+            <Link to="/Entertainment">Entertainment</Link>
+            <Link to="/Health">Health</Link>
           </nav>
           <Route exact path="/" component={Home} />
           <Route path="/Canada" component={Canada} />
@@ -36,6 +39,8 @@ class App extends Component {
           <Route path="/Business" component={Business} />
           <Route path="/Tech" component={Tech} />
           <Route path="/Sport" component={Sport} />
+          <Route path="/Entertainment" component={Entertainment} />
+          <Route path="/Health" component={Health} />
         </div>
       </Router>
     )

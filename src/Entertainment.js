@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Article from './Article';
+import Article from './Article'
 
-class France extends Component {
+class Entertainment extends Component {
   constructor(props){
       super(props)
       this.state = {
@@ -10,7 +10,7 @@ class France extends Component {
     }
 
   componentDidMount(){
-    let req = 'https://newsapi.org/v2/top-headlines?country=fr&apiKey=8c29924efc99428bacd58ae603967956';
+    let req = 'https://newsapi.org/v2/top-headlines?country=ca&category=entertainment&apiKey=8c29924efc99428bacd58ae603967956';
 
     var base = this
     fetch(req)
@@ -31,19 +31,20 @@ class France extends Component {
     if (this.state.articles) {
     return (
         <div class="articles">
-          <h1>France</h1>
+          <h1>home</h1>
           <Article articles={articles}/>
         </div>
       )
     }
     return(
       <div>
-        <h1>France News</h1>
+        <h2>Home</h2>
           Loading...
       </div>
     )
   }
 
+
 }
 
-export default France;
+export default Entertainment;

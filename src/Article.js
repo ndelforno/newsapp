@@ -4,9 +4,9 @@ class Article extends Component {
 
   render () {
     let articlesList = this.props.articles.map(article =>
-      <div>
+      <div class="article">
         <h2>{article.title}</h2>
-        <img src={article.urlToImage}/>
+        <img class="articleimg" src={article.urlToImage}/>
         <p>Written by {article.author}</p>
         <p>{article.description}</p>
         <p>{article.source.name}</p>

@@ -33,7 +33,7 @@ class Home extends Component {
     console.log(articles)
     if (this.state.articles) {
     return (
-        <div>
+        <div class="articles">
           <h1>home</h1>
           <Article articles={articles}/>
         </div>
@@ -41,7 +41,7 @@ class Home extends Component {
     }
     return(
       <div>
-        <h1>Home</h1>
+        <h2>Home</h2>
           Loading...
       </div>
     )
