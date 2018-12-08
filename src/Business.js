@@ -31,14 +31,14 @@ class Business extends Component {
     if (this.state.articles) {
     return (
         <div class="articles">
-          <h1>Local News</h1>
+          <h2>Business</h2>
           <Article articles={articles}/>
         </div>
       )
     }
     return(
       <div>
-        <h1>Local News</h1>
+        <h2>Business</h2>
           Loading...
       </div>
     )

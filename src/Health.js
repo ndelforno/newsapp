@@ -31,7 +31,7 @@ class Health extends Component {
     if (this.state.articles) {
     return (
         <div class="articles">
-          <h1>Health</h1>
+          <h2>Health</h2>
           <Article articles={articles}/>
         </div>
       )
