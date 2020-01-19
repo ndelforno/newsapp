@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Article from './Article'
 
-class Canada extends Component {
+class Info extends Component {
   constructor(props){
       super(props)
       this.state = {
@@ -10,7 +10,11 @@ class Canada extends Component {
     }
 
   componentDidMount(){
-    let req = 'https://newsapi.org/v2/top-headlines?country=ca&apiKey=8c29924efc99428bacd58ae603967956';
+    let url = 'https://newsapi.org/v2/';
+    let key = this.props.apiKey;
+    let demand = this.props.demand;
+    let req = url.concat(demand,key);
+    console.log(this.state.articles);
 
     var base = this
     fetch(req)
@@ -26,13 +30,11 @@ class Canada extends Component {
 
 
   render() {
-    let articles = this.state.articles
-    console.log(articles)
     if (this.state.articles) {
     return (
         <div class="articles">
           <h2>Canada News</h2>
-          <Article articles={articles}/>
+          <Article articles={this.state.articles}/>
         </div>
       )
     }
@@ -47,4 +49,4 @@ class Canada extends Component {
 
 }
 
-export default Canada;
+export default Info;
