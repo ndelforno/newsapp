@@ -22,7 +22,6 @@ class Info extends Component {
         return response.json()
       }).then((json) => {
         base.setState({articles: json.articles});
-        console.log(this.state.articles)
       }).catch((ex) => {
         console.log('an error occured while parsing!', ex)
       })
