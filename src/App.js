@@ -33,8 +33,8 @@ class App extends Component {
         this.fetchInfo(this.state.url.concat(this.state.demand, this.state.key));
     }
 
-    fetchInfo = async (req) => {
-        await fetch(req)
+    fetchInfo = (req) => {
+        fetch(req)
             .then((response) => {
                 return response.json()
             }).then((json) => {
@@ -44,32 +44,33 @@ class App extends Component {
             })
     }
 
-  handleClick = (e) => {;
-    switch (e.target.id){
+    handleClick = async (e) => {
+        console.log(e.target.id)
+      switch (e.target.id) {
         case "Canada":
-            this.setState({demand: "top-headlines?country=ca&", title: e.target.id});
+            await this.setState({demand: "top-headlines?country=ca&", title: e.target.id});
             break;
         case "Home":
-            this.setState({ demand: "everything?q=news&sortBy=date&", title: e.target.id});
+            await  this.setState({demand: "everything?q=news&sortBy=date&", title: e.target.id});
             break;
         case "France":
-            this.setState({ demand: "top-headlines?country=fr&", title: e.target.id });
+            await this.setState({demand: "top-headlines?country=fr&", title: e.target.id });
+            break;
         case "Business":
-            this.setState({ demand: "top-headlines?country=ca&category=business&", title: e.target.id });
+            await this.setState({demand: "top-headlines?country=ca&category=business&", title: e.target.id });
             break;
         case "Sport":
-            this.setState({ demand: "top-headlines?country=ca&category=sports&", title: e.target.id });
+            await this.setState({demand: "top-headlines?country=ca&category=sports&", title: e.target.id });
             break;
         case "Tech":
-            this.setState({ demand: "top-headlines?country=ca&category=technology&", title: e.target.id });
+            await this.setState({demand: "top-headlines?country=ca&category=technology&", title: e.target.id });
             break;
         case "Health":
-            this.setState({ demand: "top-headlines?country=ca&category=health&", title: e.target.id });
+            await this.setState({demand: "top-headlines?country=ca&category=health&", title: e.target.id });
             break;
-      }
-      var req = this.state.url.concat(this.state.demand, this.state.key);
-      var resp = this.fetchInfo(req);
-      console.log(resp)
+        }
+        console.log(this.state.demand)
+      this.fetchInfo(this.state.url.concat(this.state.demand, this.state.key));
   };
 
 
