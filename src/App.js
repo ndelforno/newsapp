@@ -9,14 +9,6 @@ import {
   Link
 } from 'react-router-dom';
 
-import Home from './Home';
-import Info from './Canada';
-import France from './France';
-import Business from './Business';
-import Tech from './Tech';
-import Sport from './Sport';
-import Entertainment from './Entertainment';
-import Health from './Health';
 import Article from './Article'
 
 class App extends Component {
