@@ -15,7 +15,7 @@ class App extends Component {
   state = {
     url : 'https://newsapi.org/v2/',
     search: "",
-    selectedCountry: "",
+    selectedCountry: "ca",
     demand: "everything?q=news&sortBy=date&",
     key: "apiKey=8c29924efc99428bacd58ae603967956",
     title: "Home",
@@ -38,35 +38,21 @@ class App extends Component {
     }
 
     handleClick = async (e) => {
-      switch (e.target.id) {
-        case "Canada":
-            await this.setState({demand: "top-headlines?country=ca&", title: e.target.id});
-            break;
-        case "Home":
-            await  this.setState({demand: "everything?q=news&sortBy=date&", title: e.target.id});
-            break;
-        case "France":
-            await this.setState({demand: "top-headlines?country=fr&", title: e.target.id });
-            break;
-        case "Business":
-            await this.setState({demand: "top-headlines?country=ca&category=business&", title: e.target.id });
-            break;
-        case "Sport":
-            await this.setState({demand: "top-headlines?country=ca&category=sports&", title: e.target.id });
-            break;
-        case "Tech":
-            await this.setState({demand: "top-headlines?country=ca&category=technology&", title: e.target.id });
-            break;
-        case "Health":
-            await this.setState({demand: "top-headlines?country=ca&category=health&", title: e.target.id });
-            break;
+      console.log(e.target.id)
+        if (e.target.id == "Home") {
+          await  this.setState({demand: "everything?q=news&sortBy=date&", title: e.target.id});
+        } else if (e.target.id == "Top") {
+          await this.setState({demand: "top-headlines?country=" + this.state.selectedCountry + "&", title: e.target.id });
+        } else {
+          await this.setState({demand: "top-headlines?country=" + this.state.selectedCountry + "&category=" + e.target.id + "&", title: e.target.id });
         }
+      console.log(this.state.demand)
       this.fetchInfo(this.state.url.concat(this.state.demand, this.state.key));
   };
 
-    chooseCountry = (e) => {
+    chooseCountry = async (e) => {
         console.log(e.target.id)
-        this.setState(e.target.id)
+        await this.setState({selectedCountry: e.target.id});
     }
 
   render() {
@@ -91,7 +77,7 @@ class App extends Component {
 }
 
 const Category = (props) => {
-  let categories = ["Home","France","Canada","Business","Sport","Tech","Health"];
+  let categories = ["Home","Top","Business","Sports","Technology","Health"];
   return (
       categories.map(cat => <button id={cat} key={cat} onClick = {props.handleClick}> {cat} </button>)
   )

@@ -3,10 +3,10 @@ import React, {Component} from 'react';
 class Article extends Component {
 
   render () {
-    let articlesList = this.props.articles.map(article =>
-      <div class="article">
+    let articlesList = this.props.articles.map((article, index) =>
+      <div className="article" key={index}>
         <h3>{article.title}</h3>
-        <img class="articleimg" src={article.urlToImage}/>
+        <img className="articleimg" src={article.urlToImage}/>
         <p>Written by {article.author}</p>
         <p>{article.content}</p>
         <p>{article.source.name}</p>
