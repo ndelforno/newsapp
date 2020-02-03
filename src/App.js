@@ -14,7 +14,6 @@ import Article from './Article'
 class App extends Component {
   state = {
     url : 'https://newsapi.org/v2/',
-    search: "",
     selectedCountry: "ca",
     demand: "everything?q=news&sortBy=date&",
     key: "apiKey=8c29924efc99428bacd58ae603967956",
@@ -39,10 +38,9 @@ class App extends Component {
 
     handleClick = async (e) => {
       console.log(e.target.id)
+        e.target.classList.add("checked")
         if (e.target.id == "Home") {
-          await  this.setState({demand: "everything?q=news&sortBy=date&", title: e.target.id});
-        } else if (e.target.id == "Top") {
-          await this.setState({demand: "top-headlines?country=" + this.state.selectedCountry + "&", title: e.target.id });
+          await  this.setState({demand: "top-headlines?country=" + this.state.selectedCountry + "&", title: e.target.id});
         } else {
           await this.setState({demand: "top-headlines?country=" + this.state.selectedCountry + "&category=" + e.target.id + "&", title: e.target.id });
         }
@@ -52,6 +50,8 @@ class App extends Component {
 
     chooseCountry = async (e) => {
         console.log(e.target.id)
+        //document.getElementsByClassName("checked").map(e => e.removeClass("checked"));
+        e.target.classList.add("checked")
         await this.setState({selectedCountry: e.target.id});
     }
 
@@ -77,17 +77,18 @@ class App extends Component {
 }
 
 const Category = (props) => {
-  let categories = ["Home","Top","Business","Sports","Technology","Health"];
+  let categories = ["Home","Business","Sports","Technology","Health"];
   return (
       categories.map(cat => <button id={cat} key={cat} onClick = {props.handleClick}> {cat} </button>)
   )
 };
 
 const Country = (props) => {
-    let countries = ["fr", "ca"]
+    let countries = ["ca", "fr"]
     return (
-        countries.map(ctry => <button id={ctry} key={ctry} className="ctry" onClick={props.chooseCountry}> {ctry} </button>)
-        )
+        countries.map(ctry => <button id={ctry} key={ctry}  onClick={props.chooseCountry}> {ctry} </button>)
+        document.getElementById("ca").classList.add("checked")
+    )
 };
 
 export default App;

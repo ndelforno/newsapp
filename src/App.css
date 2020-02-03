@@ -18,8 +18,8 @@
   color: white;
 }
 
-.ctry {
-  color: #61dafb;
+.checked {
+  color: blue;
 }
 
 @keyframes App-logo-spin {
