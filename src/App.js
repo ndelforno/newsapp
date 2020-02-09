@@ -44,13 +44,23 @@ class App extends Component {
         } else {
           await this.setState({demand: "top-headlines?country=" + this.state.selectedCountry + "&category=" + e.target.id + "&", title: e.target.id });
         }
-      console.log(this.state.demand)
+        // var containers = document.getElementById("catDiv");
+        // var btns = containers.getElementsByClassName("btn");
+        // var current = document.getElementsByClassName("checked");
+        // if (current.length > 0) {
+        //     current[0].className = current[0].className.replace("checked", "");
+        // }
       this.fetchInfo(this.state.url.concat(this.state.demand, this.state.key));
-  };
+    };
 
     chooseCountry = async (e) => {
         console.log(e.target.id)
-        //document.getElementsByClassName("checked").map(e => e.removeClass("checked"));
+        var containers = document.getElementById("ctryDiv");
+        var btns = containers.getElementsByClassName("btn");
+        var current = document.getElementsByClassName("checked");
+        if (current.length > 0) {
+            current[0].className = current[0].className.replace("checked", "");
+        }
         e.target.classList.add("checked")
         await this.setState({selectedCountry: e.target.id});
     }
@@ -60,10 +70,10 @@ class App extends Component {
         <div>
           <h1>The Expatriates</h1>
             <hr></hr>
-            <div>
+            <div id= "ctryDiv">
                 <Country chooseCountry={this.chooseCountry} />
             </div>
-            <div>
+            <div id= "catDiv">
                 <Category handleClick={this.handleClick} />
             </div>
                 <div className="articles">
@@ -87,7 +97,6 @@ const Country = (props) => {
     let countries = ["ca", "fr"]
     return (
         countries.map(ctry => <button id={ctry} key={ctry}  onClick={props.chooseCountry}> {ctry} </button>)
-        document.getElementById("ca").classList.add("checked")
     )
 };
 
