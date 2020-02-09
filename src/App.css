@@ -18,7 +18,11 @@
   color: white;
 }
 
-.checked {
+.ctryChecked{
+  color: blue;
+}
+
+.catChecked{
   color: blue;
 }
 

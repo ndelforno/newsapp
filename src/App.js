@@ -38,31 +38,28 @@ class App extends Component {
 
     handleClick = async (e) => {
       console.log(e.target.id)
-        e.target.classList.add("checked")
+      var current = document.getElementsByClassName("catChecked");
+      if (current.length > 0) {
+          current[0].className = current[0].className.replace("catChecked", "");
+      }
+      e.target.classList.add("catChecked")
         if (e.target.id == "Home") {
           await  this.setState({demand: "top-headlines?country=" + this.state.selectedCountry + "&", title: e.target.id});
         } else {
           await this.setState({demand: "top-headlines?country=" + this.state.selectedCountry + "&category=" + e.target.id + "&", title: e.target.id });
         }
-        // var containers = document.getElementById("catDiv");
-        // var btns = containers.getElementsByClassName("btn");
-        // var current = document.getElementsByClassName("checked");
-        // if (current.length > 0) {
-        //     current[0].className = current[0].className.replace("checked", "");
-        // }
       this.fetchInfo(this.state.url.concat(this.state.demand, this.state.key));
     };
 
     chooseCountry = async (e) => {
         console.log(e.target.id)
-        var containers = document.getElementById("ctryDiv");
-        var btns = containers.getElementsByClassName("btn");
-        var current = document.getElementsByClassName("checked");
+        var current = document.getElementsByClassName("ctryChecked");
         if (current.length > 0) {
-            current[0].className = current[0].className.replace("checked", "");
+            current[0].className = current[0].className.replace("ctryChecked", "");
         }
-        e.target.classList.add("checked")
+        e.target.classList.add("ctryChecked")
         await this.setState({selectedCountry: e.target.id});
+        this.fetchInfo(this.state.url.concat(this.state.demand, this.state.key));
     }
 
   render() {
