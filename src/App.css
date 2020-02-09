@@ -18,8 +18,8 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.checked {
+  color: blue;
 }
 
 @keyframes App-logo-spin {
