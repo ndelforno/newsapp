@@ -73,18 +73,20 @@ class App extends Component {
   render() {
     return (
         <div>
-          <h1>The Expatriates</h1>
-            <hr></hr>
-            <div id= "ctryDiv">
-                <Country chooseCountry={this.chooseCountry} />
-            </div>
-            <div id= "catDiv">
-                <Category handleClick={this.handleClick} />
-            </div>
-                <div className="articles">
-                    <h2>{this.state.title}</h2>
-                    <Article articles={this.state.articles} />
+            <div id="navbar" className="sticky" >
+                <h1>The Expatriates</h1>
+                <div id="ctryDiv">
+                    <Country chooseCountry={this.chooseCountry} />
                 </div>
+                <div id="catDiv">
+                    <Category handleClick={this.handleClick} />
+                </div>
+                <hr></hr>
+            </div>
+            <div className="articles">
+                <h2>{this.state.title}</h2>
+                <Article articles={this.state.articles} />
+            </div>
           <footer>Made By Nicolas Delforno</footer>
         </div>
     )

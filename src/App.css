@@ -26,11 +26,32 @@
   color: blue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#catDiv{
+    text-align: center;
 }
+
+#ctryDiv {
+    text-align: center;
+}
+
+#ctryDiv > button {
+    //font-size: 30px;
+    margin: 20px;
+    text-decoration: none;
+}
+
+#catDiv > button {
+    //font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+
+
