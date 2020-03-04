@@ -75,11 +75,13 @@ class App extends Component {
         <div>
             <div id="navbar" className="sticky" >
                 <h1>The Expatriates</h1>
-                <div id="ctryDiv">
-                    <Country chooseCountry={this.chooseCountry} />
-                </div>
-                <div id="catDiv">
-                    <Category handleClick={this.handleClick} />
+                <div id= "choiceDiv">
+                    <div id="ctryDiv">
+                        <Country chooseCountry={this.chooseCountry} />
+                    </div>
+                    <div id="catDiv">
+                        <Category handleClick={this.handleClick} />
+                    </div>
                 </div>
                 <hr></hr>
             </div>
@@ -101,7 +103,7 @@ const Category = (props) => {
 };
 
 const Country = (props) => {
-    let countries = ["ca", "fr"]
+    let countries = ["CA", "FR"]
     return (
         countries.map(ctry => <button id={ctry} key={ctry}  onClick={props.chooseCountry}> {ctry} </button>)
     )

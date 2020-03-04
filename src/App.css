@@ -18,30 +18,38 @@
   color: white;
 }
 
-.ctryChecked{
-  color: blue;
+.ctryChecked {
+    color: #234884;
+    background-color: white;
 }
 
-.catChecked{
-  color: blue;
+.catChecked {
+    color: #234884;
+    background-color: white;
 }
 
-#catDiv{
+#choiceDiv{
+    background-color: lightsteelblue;
     text-align: center;
+}
+#catDiv {
+    text-align: center;
+    display: inline;
 }
 
 #ctryDiv {
     text-align: center;
+    display: inline;
 }
 
 #ctryDiv > button {
     //font-size: 30px;
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     text-decoration: none;
 }
 
 #catDiv > button {
-    //font-size: 30px;
     margin-left: 20px;
     margin-right: 20px;
     text-decoration: none;
@@ -52,6 +60,15 @@
     top: 0;
     width: 100%;
     background-color: white;
+}
+
+button {
+    padding: 8px;
+    background-color: lightsteelblue;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: large;
 }
 
 
