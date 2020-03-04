@@ -57,12 +57,12 @@
     text-decoration: none;
 }
 
-.sticky {
+/*.sticky {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: white;
-}
+}*/
 
 button {
     padding: 8px;

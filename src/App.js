@@ -16,7 +16,7 @@ class App extends Component {
     url : 'https://newsapi.org/v2/',
     selectedCountry: "ca",
     selectedCategory: "",
-    demand: "top-headlines?country=ca&",
+      demand: "top-headlines?country=ca&pagesize=12&",
     key: "apiKey=8c29924efc99428bacd58ae603967956",
     title: "Home",
     articles: [],
@@ -45,7 +45,7 @@ class App extends Component {
       }
       e.target.classList.add("catChecked")
             this.setState({ selectedCategory: e.target.id });
-            await this.setState({ demand: "top-headlines?country=" + this.state.selectedCountry + "&category=" + e.target.id + "&", title: e.target.id });
+        await this.setState({ demand: "top-headlines?country=" + this.state.selectedCountry + "&category=" + e.target.id + "&pagesize=12&", title: e.target.id });
       this.fetchInfo(this.state.url.concat(this.state.demand, this.state.key));
     };
 
@@ -58,7 +58,7 @@ class App extends Component {
         e.target.classList.add("ctryChecked")
         await this.setState({selectedCountry: e.target.id});
         if (this.state.selectedCategory) {
-            this.setState({ demand: "top-headlines?country=" + this.state.selectedCountry + "&category=" + this.state.selectedCategory + "&" });
+            this.setState({ demand: "top-headlines?country=" + this.state.selectedCountry + "&category=" + this.state.selectedCategory + "&pagesize=12&" });
         } else {
             this.setState({ demand: "top-headlines?country=" + this.state.selectedCountry + "&" })
         }
@@ -90,7 +90,7 @@ class App extends Component {
 }
 
 const Category = (props) => {
-    let categories = ["General", "Business", "Sports", "Technology", "Health", "Entertainment"]
+    let categories = ["General", "Business", "Sports", "Technology", "Health","Science", "Entertainment"]
   return (
       categories.map(cat => <button id={cat} key={cat} onClick = {props.handleClick}> {cat} </button>)
   )
