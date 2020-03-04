@@ -44,12 +44,8 @@ class App extends Component {
           current[0].className = current[0].className.replace("catChecked", "");
       }
       e.target.classList.add("catChecked")
-        if (e.target.id == "Home") {
-            await this.setState({ demand: "top-headlines?country=" + this.state.selectedCountry + "&", title: e.target.id });
-        } else {
             this.setState({ selectedCategory: e.target.id });
             await this.setState({ demand: "top-headlines?country=" + this.state.selectedCountry + "&category=" + e.target.id + "&", title: e.target.id });
-        }
       this.fetchInfo(this.state.url.concat(this.state.demand, this.state.key));
     };
 
@@ -78,7 +74,7 @@ class App extends Component {
                 <div id= "choiceDiv">
                     <div id="ctryDiv">
                         <Country chooseCountry={this.chooseCountry} />
-                    </div>
+                    </div> |
                     <div id="catDiv">
                         <Category handleClick={this.handleClick} />
                     </div>
@@ -96,7 +92,7 @@ class App extends Component {
 }
 
 const Category = (props) => {
-  let categories = ["Home","Business","Sports","Technology","Health"];
+    let categories = ["General", "Business", "Sports", "Technology", "Health", "Entertainment"]
   return (
       categories.map(cat => <button id={cat} key={cat} onClick = {props.handleClick}> {cat} </button>)
   )

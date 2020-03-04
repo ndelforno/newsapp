@@ -28,9 +28,11 @@
     background-color: white;
 }
 
-#choiceDiv{
+#choiceDiv {
     background-color: lightsteelblue;
     text-align: center;
+    color: white;
+    font-size: large;
 }
 #catDiv {
     text-align: center;
@@ -70,5 +72,11 @@ button {
     outline: none;
     font-size: large;
 }
+
+    button:hover {
+        text-decoration: underline;
+        color: #234884;
+        background-color: white;
+    }
 
 
