@@ -48,31 +48,33 @@ nav > a:hover{
     text-align: center;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 200px
+    margin-top: 200px ;
 }
 
-/* .article:hover{
-  border: 2px solid #234884;
+.article:hover{
+  border: 1px solid #234884;
   border-radius: 4px;
-} */
-.article{
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-  margin:50px;
-  padding: 5px;
-  width:90%;
+}
+.article {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+    height: 100%;
+    width: 400px;
+    border: 0.5px solid lightgrey;
+    display: inline-block;
 }
 
-.article > a{
+
+a{
   font-weight: bold;
   text-decoration: none;
-  color:#234884;
+  color:Black;
 }
 
 .articleimg{
-  //width: 100%;
-  height: 600px;
+  width: 100%;
 }
 footer{
   margin: 10px;

@@ -79,10 +79,8 @@ class App extends Component {
                         <Category handleClick={this.handleClick} />
                     </div>
                 </div>
-                <hr></hr>
             </div>
             <div className="articles">
-                <h2>{this.state.title}</h2>
                 <Article articles={this.state.articles} />
             </div>
           <footer>Made By Nicolas Delforno</footer>
@@ -99,7 +97,7 @@ const Category = (props) => {
 };
 
 const Country = (props) => {
-    let countries = ["CA", "FR"]
+    let countries = ["CA", "FR", "US"]
     return (
         countries.map(ctry => <button id={ctry} key={ctry}  onClick={props.chooseCountry}> {ctry} </button>)
     )

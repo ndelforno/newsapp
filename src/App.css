@@ -79,4 +79,13 @@ button {
         background-color: white;
     }
 
+footer {
+    background-color: lightsteelblue;
+    text-align: center;
+    color: white;
+    font-size: large;
+    margin:0;
+    height: 50px;
+}
+
 
