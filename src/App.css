@@ -19,42 +19,42 @@
 }
 
 .ctryChecked {
-    color: #234884;
-    background-color: white;
+  color: #234884;
+  background-color: white;
 }
 
 .catChecked {
-    color: #234884;
-    background-color: white;
+  color: #234884;
+  background-color: white;
 }
 
 #choiceDiv {
-    background-color: lightsteelblue;
-    text-align: center;
-    color: white;
-    font-size: large;
+  background-color: lightsteelblue;
+  text-align: center;
+  color: white;
+  font-size: large;
 }
 #catDiv {
-    text-align: center;
-    display: inline;
+  text-align: center;
+  display: inline;
 }
 
 #ctryDiv {
-    text-align: center;
-    display: inline;
+  text-align: center;
+  display: inline;
 }
 
 #ctryDiv > button {
-    //font-size: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-decoration: none;
+  //font-size: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
 }
 
 #catDiv > button {
-    margin-left: 20px;
-    margin-right: 20px;
-    text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
 }
 
 /*.sticky {
@@ -65,27 +65,30 @@
 }*/
 
 button {
-    padding: 8px;
-    background-color: lightsteelblue;
-    color: white;
-    border: none;
-    outline: none;
-    font-size: large;
+  font-weight: bold;
+  padding: 8px;
+  background-color: lightsteelblue;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: large;
 }
 
-    button:hover {
-        text-decoration: underline;
-        color: #234884;
-        background-color: white;
-    }
+button:hover {
+  text-decoration: underline;
+  color: #234884;
+  background-color: white;
+}
 
 footer {
-    background-color: lightsteelblue;
-    text-align: center;
-    color: white;
-    font-size: large;
-    margin:0;
-    height: 50px;
+  background-color: lightsteelblue;
+  text-align: center;
+  color: white;
+  font-size: large;
+  margin:0;
+  height: 50px;
 }
 
-
+footer > p {
+  padding-top: 10px;
+}

@@ -83,7 +83,7 @@ class App extends Component {
             <div className="articles">
                 <Article articles={this.state.articles} />
             </div>
-          <footer>Made By Nicolas Delforno</footer>
+          <footer><p>Made By Nicolas Delforno</p></footer>
         </div>
     )
   }
