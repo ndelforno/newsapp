@@ -15,7 +15,7 @@ class App extends Component {
   state = {
     url : 'https://newsapi.org/v2/',
     selectedCountry: "ca",
-    selectedCategory: "",
+    selectedCategory: "General",
       demand: "top-headlines?country=ca&pagesize=12&",
     key: "apiKey=8c29924efc99428bacd58ae603967956",
     title: "Home",
@@ -24,6 +24,8 @@ class App extends Component {
 
     componentDidMount() {
         this.fetchInfo(this.state.url.concat(this.state.demand, this.state.key));
+        document.getElementById('CA').classList.add('ctryChecked')
+        document.getElementById('General').classList.add('catChecked')
     }
 
     fetchInfo = (req) => {
@@ -38,7 +40,6 @@ class App extends Component {
     }
 
     handleClick = async (e) => {
-      console.log(e.target.id)
       var current = document.getElementsByClassName("catChecked");
       if (current.length > 0) {
           current[0].className = current[0].className.replace("catChecked", "");
@@ -50,7 +51,6 @@ class App extends Component {
     };
 
     chooseCountry = async (e) => {
-        console.log(e.target.id)
         var current = document.getElementsByClassName("ctryChecked");
         if (current.length > 0) {
             current[0].className = current[0].className.replace("ctryChecked", "");
@@ -62,7 +62,6 @@ class App extends Component {
         } else {
             this.setState({ demand: "top-headlines?country=" + this.state.selectedCountry + "&" })
         }
-        console.log(this.state.demand)
         this.fetchInfo(this.state.url.concat(this.state.demand, this.state.key));
     }
 
